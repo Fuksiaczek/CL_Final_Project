@@ -5,24 +5,22 @@ import './../../sass/style.scss';
 
 class LogIn extends Component
 {
-    //const {name, password} = this.props;
     render() {
         return(
             <>
                 <div className="lor-background">
                     <form>
-                        <label>Login
-                            <input type="text"
-                                   name="name"
-                                   value={this.props.value}
-                                   placeholder="your login"/>
-                        </label>
-                        <label>Password
-                            <input type="password"
-                                   name="password"
-                                   value={this.props.value}
-                                   placeholder="your password"/>
-                        </label>
+                        <label>LOGIN</label>
+                        <input type="text"
+                               name="login"
+                               value={this.props.value}
+                               placeholder="your login"/>
+                        <label>PASSWORD</label>
+                        <input type="password"
+                               name="password"
+                               value={this.props.value}
+                               placeholder="your password"/>
+                        <button type="submit lor-btn">LOG IN</button>
                     </form>
                 </div>
             </>

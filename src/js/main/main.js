@@ -13,7 +13,7 @@ class Main extends Component{
 
     state =
         {
-            loggin: "false"
+            isLogIn: false
         }
 
     render() {
@@ -22,7 +22,7 @@ class Main extends Component{
                 <section className="background-image ">
                     <div className="container">
                         <div className="sky">
-                            {!this.state.loggin ? <MainText/> : <LoginOrRegister/>}
+                            {this.state.isLogIn ? <MainText/> : <LoginOrRegister/>}
                             <BackgroundImage/>
                         </div>
                     </div>

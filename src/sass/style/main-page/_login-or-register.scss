@@ -1,0 +1,113 @@
+@import '../general/variables';
+
+
+.login-or-register
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 70px;
+  margin-top: 280px;
+  .lor-btn
+  {
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    color: $color-light;
+    background: $color-main3-contrast;
+  }
+  .log-in-btn
+  {
+    word-spacing: 0.5rem;
+  }
+}
+
+//form
+.login-or-register {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //.lor-background::before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  height: 95%;
+  //  width: 95%;
+  //  padding: -20px;
+  //  border: 1px solid $color-main1;
+  //  background: none;
+  //}
+
+  .lor-background {
+    position: relative;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    height: 700px;
+    width: 70%;
+    background: rgba(250, 250, 250, 0.15%);
+    border: 6px solid $color-main1;
+
+    form {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      label {
+        padding: 10px 0 5px 0;
+      }
+
+      input {
+        padding: 5px;
+      }
+
+      input:focus
+      {
+        -webkit-box-shadow: 0 0 10px 0 $color-main1;
+        -moz-box-shadow: 0 0 10px 0 $color-main1;
+        box-shadow: 0 0 10px 0 $color-main1;
+        border: none;
+      }
+
+
+      button {
+        line-height: 10px;
+        align-self: center;
+        width: 100%;
+        padding: 10px;
+        margin: 30px 0 10px 0;
+        border-radius: 20px;
+        background: $color-main3-contrast;
+        color: $color-light;
+        font-weight: 700;
+        font-size: 1rem;
+
+      }
+    }
+  }
+
+  //.login-or-register::before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  height: 96%;
+  //  width: 96%;
+  //  padding: -20px;
+  //  border: 1px solid $color-main1;
+  //}
+
+
+}
+
