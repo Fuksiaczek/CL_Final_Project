@@ -1,0 +1,66 @@
+@import '../general/variables';
+@import '/background-img';
+@import '/log-or-register';
+@import '/log-in';
+
+.sky
+{
+  height: inherit;
+  width: inherit;
+  background: $color-main2;
+  //background-color: rgba(25,59,83,1);
+  //background: @include filter-gradient(#193b53, #1f5057, vertical);
+  //background: @include background-image(linear-gradient(top, rgba(25,59,83,1) 0%, rgba(31,80,87,1) 100%));
+
+  background: rgba(29,69,98,1);
+  background: -moz-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,69,98,1)), color-stop(100%, rgba(38,96,105,1)));
+  background: -webkit-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
+  background: -o-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
+  background: -ms-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
+  background: linear-gradient(to bottom, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4562', endColorstr='#266069', GradientType=0 );
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  .graphic
+  {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .text
+  {
+    padding-top: 100px;
+    height: 70%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .h2
+    {
+      width: 100%;
+      font-weight: 500;
+      text-align: justify-all;
+      letter-spacing: 0.4rem;
+      font-size: 1rem;
+      word-spacing: 0.7rem;
+      line-height: 1.5rem;
+    }
+    .h2 h2:nth-of-type(2)
+    {
+      word-spacing: 0.1rem;
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+@import 'variables';
+
+html {
+  font-size: 14px;
+  font-family: $font-main;
+}
+
+body {
+  width: 100%;
+  background-color: $color-dark;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+h1
+{
+  font-family: $font-h1;
+  font-weight: 400;
+  font-size: 5rem;
+  color: $color-main1;
+
+}
