@@ -54,13 +54,16 @@ class LoginOrRegister extends Component
         })
     };
 
+
+
     render() {
         const {toLog, toRegister, styleRegister, styleLogIn} = this.state;
+        const {usersLogIn} = this.props;
         return(
             <>
                 <div className="login-or-register">
-                    {toLog && <LogIn/>}
-                    {toRegister && <Register/>}
+                    {toLog && <LogIn usersLogIn={usersLogIn}/>}
+                    {toRegister && <Register usersLogIn={usersLogIn}/>}
                     {!(toLog || toRegister) &&
                         <>
                     <button className="log-in-btn lor-btn"

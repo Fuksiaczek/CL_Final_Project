@@ -40,8 +40,7 @@ class Register extends Component
                                name="password"
                                value={this.props.value}
                                placeholder="repeat your password"/>
-                        <button type="submit lor-btn">LOG IN</button>
-
+                        <input type="submit" className="submit" value="LOG IN"/>
                     </form>
                 </div>
             </>

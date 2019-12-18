@@ -47,6 +47,33 @@
   //  background: none;
   //}
 
+  //.lor-background::before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  top: 8px;
+  //  left: 8px;
+  //  height: 150px;
+  //  width: 150px;
+  //  padding: -20px;
+  //  border-top: 1px solid $color-main1;
+  //  border-left: 1px solid $color-main1;
+  //  background: none;
+  //}
+  //.lor-background::after {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  top: 12px;
+  //  left: 12px;
+  //  height: 100px;
+  //  width: 100px;
+  //  padding: -20px;
+  //  border-top: 1px solid $color-main1;
+  //  border-left: 1px solid $color-main1;
+  //  background: none;
+  //}
+
   .lor-background {
     position: relative;
     top: 30%;
@@ -82,7 +109,7 @@
       }
 
 
-      button {
+      .submit {
         line-height: 10px;
         align-self: center;
         width: 100%;
