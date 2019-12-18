@@ -9,22 +9,23 @@
   flex-direction: column;
   padding-bottom: 70px;
   margin-top: 280px;
-  .lor-btn
-  {
-    letter-spacing: 0.3rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 10px;
-    height: 50px;
-    width: 200px;
-    border-radius: 25px;
-    color: $color-light;
-    background: $color-main3-contrast;
-  }
+
   .log-in-btn
   {
     word-spacing: 0.5rem;
   }
+}
+.lor-btn
+{
+  letter-spacing: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px;
+  height: 50px;
+  width: 220px;
+  border-radius: 25px;
+  color: $color-light;
+  background: $color-main3-contrast;
 }
 
 //form
@@ -138,3 +139,13 @@
 
 }
 
+
+.progress
+{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  border: 3px solid $color-main2
+}

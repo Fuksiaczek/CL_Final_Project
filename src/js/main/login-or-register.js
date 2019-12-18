@@ -62,7 +62,9 @@ class LoginOrRegister extends Component
         return(
             <>
                 <div className="login-or-register">
-                    {toLog && <LogIn usersLogIn={usersLogIn}/>}
+                    {toLog && <LogIn usersLogIn={usersLogIn}
+                                     setLogStatus={this.props.setLogStatus}
+                                     setLogin={this.props.setLogin}/>}
                     {toRegister && <Register usersLogIn={usersLogIn}/>}
                     {!(toLog || toRegister) &&
                         <>

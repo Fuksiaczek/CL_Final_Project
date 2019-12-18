@@ -3,17 +3,20 @@
 html {
   font-size: 14px;
   font-family: $font-main;
+
 }
 
 body {
   width: 100%;
-  background-color: $color-dark;
+  background: $color-dark;
+  height: 100vh;
+
 }
 
 .container {
   max-width: 1200px;
-  height: 100vh;
   margin: 0 auto;
+  position: relative;
 }
 
 h1

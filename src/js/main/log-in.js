@@ -57,6 +57,7 @@ class LogIn extends Component
                     log: true,
                     submit: true
                 });
+                this.props.setLogin(this.state.uLogin);
                 break;
             }
             else if(submit === "")
@@ -66,7 +67,6 @@ class LogIn extends Component
                 })
             }
         }
-
 
 
 
@@ -86,10 +86,8 @@ class LogIn extends Component
 
 
 
+
     render() {
-        console.log("pass " + this.state.pass);
-        console.log("log " + this.state.log);
-        console.log("submit " + this.state.submit);
         const {usersLogIn} = this.props;
         const {submit} = this.state;
         return(
@@ -117,7 +115,7 @@ class LogIn extends Component
                             </form>
                     </> :
                     <>
-                        <LoadingData/>
+                        <LoadingData setLogStatus={this.props.setLogStatus}/>
                     </>}
                 </div>
                 <div>

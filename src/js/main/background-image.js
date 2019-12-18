@@ -5,6 +5,9 @@ import './../../sass/style.scss';
 
 class BackgroundImage extends Component
 {
+
+
+
     render() {
         return(
             <>

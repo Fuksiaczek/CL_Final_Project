@@ -2,9 +2,13 @@
 @import '/background-img';
 @import '/login-or-register';
 
+
+
+
+
 .sky
 {
-  height: inherit;
+  height: 100vh;
   width: inherit;
   background: $color-main2;
   //background-color: rgba(25,59,83,1);
@@ -37,13 +41,12 @@
   }
   .text
   {
-    padding-top: 100px;
     height: 70%;
     width: 50%;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
 
     .h2
@@ -59,18 +62,14 @@
     .h2 h2:nth-of-type(2)
     {
       word-spacing: 0.1rem;
+      margin-bottom: 70px;
     }
   }
 
 }
 
 
-body {
-  background: black;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
+
 
 h1{
   font-size: 100px;
@@ -85,20 +84,28 @@ h1{
   height: 100vh;
 }
 
+
+.snow
+{
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: visible;
+}
+
 .Snowflake {
-  dispalay: inline-block;
-  width: 0.1%;
-  color: #FFFAFA;
+  dispalay: flex;
+  color: #FAFAFA;
   opacity: 0;
-  font-size: 120px;
-  margin: 0;
-  padding: 0;
-  animation: fall 16s linear infinite;
+  position: relative;
 }
 
 @keyframes fall {
   0% {
-    opacity: 0;
+    opacity: 1;
+
   }
   3% {
     opacity: 0.9;
@@ -108,8 +115,44 @@ h1{
     opacity: 0.9;
   }
   100% {
-    transform: translate(0, 97vh);
+    transform: translate(0, 70vh);
     opacity: 0;
   }
 }
 
+
+//header
+
+.header
+{
+  height: 70px;
+  width: 100%;
+  background: $color-light;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 40px;
+
+  .fa-user
+  {
+    color: $color-tree3;
+    padding-left: 30px;
+  }
+
+  .log-in-data
+  {
+    display: flex;
+    align-items: center;
+
+
+    h2
+    {
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+}

@@ -7,10 +7,11 @@ class LoadingData extends Component
 {
     state =
         {
-            widthState: 0
+            widthState: 0,
         };
 
     componentDidMount() {
+        const {widthState} = this.state;
         this.intervalId = setInterval( () =>
         {
             this.setState({
@@ -19,9 +20,11 @@ class LoadingData extends Component
 
             if(this.state.widthState === 100)
             {
+                this.props.setLogStatus();
                 clearInterval(this.intervalId)
             }
         }, 100);
+
 
 
 
@@ -33,15 +36,16 @@ class LoadingData extends Component
         const {widthState} = this.state;
         const divStyle =
             {
-                width: widthState + "px",
-                height: "100px",
-                background: "red"
+                width: widthState + "%",
+                height: "30px",
+                background: "#b81719"
             };
+
         return(
+
             <div className="progress">
-                {widthState !== 100 ?
-                    <div className="progress-bar" style={divStyle}></div>:
-                    <span>Dane załadowane!</span>}
+                {widthState !== 100 &&
+                    <div className="progress-bar" style={divStyle}></div>}
             </div>
         )
     }

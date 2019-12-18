@@ -14,11 +14,12 @@ const Snowflake = (props) =>{
 class Snow extends Component {
     snow=()=>{
         let animationDelay = '0s';
-        let fontSize = '100px';
-        let arr = Array.from('Snowflakes are awesome!!! They are like little pieces of magic!!! Love snowflakes!!! Snowflakes are awesome!!! They are like little pieces of magic!!! Love snowflakes!!! Snowflakes are awesome!!! They are like little pieces of magic!!! Love snowflakes!!!')
+        let fontSize = '200px';
+        let arr = Array.from('************************************************************************************************************************************************************************************************')
         return arr.map((el, i)=>{
-            animationDelay = `${(Math.random()*16).toFixed(2)}s`;
-            fontSize = `${(Math.floor(Math.random()*10) + 10)}px`;
+            animationDelay = `${(Math.random()*100).toFixed(2)}s`;
+            fontSize = `${(Math.floor(Math.random()*10) + 40)}px`;
+
             let style = {
                 animationDelay,
                 fontSize
@@ -29,9 +30,9 @@ class Snow extends Component {
 
     render(){
         return(
-            <>
+            <div className="snow">
                 {this.snow()}
-            </>
+            </div>
 
         )
     }
