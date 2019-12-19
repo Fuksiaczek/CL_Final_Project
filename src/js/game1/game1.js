@@ -13,7 +13,7 @@ class Game1 extends Component
     render() {
         return(
             <>
-                <TreeDress/>
+                <TreeDress login={this.props.login}/>
             </>
         )
     }

@@ -18,7 +18,7 @@ class Main extends Component{
     state =
         {
             isLogIn: false,
-            login: ""
+            //login: ""
         }
 
         setLogStatus = () =>
@@ -28,20 +28,18 @@ class Main extends Component{
                 })
         };
 
-
-
-    setLogin = (user) =>
-    {
-        this.setState({
-            login: user
-        })
-    }
+    // setLogin = (user) =>
+    // {
+    //     this.setState({
+    //         login: user
+    //     })
+    // }
 
     render() {
-        const {isLogIn, login} = this.state;
+        const {isLogIn} = this.state;
+        const {login} = this.props;
         return(
             <>
-
                 <Header isLogIn={isLogIn} login={login}/>
 
                 <section className="background-image ">
@@ -51,7 +49,7 @@ class Main extends Component{
                             {this.state.isLogIn ? <MainText/> :
                             <LoginOrRegister usersLogIn={users}
                             setLogStatus={this.setLogStatus}
-                            setLogin={this.setLogin}/>}
+                            setLogin={this.props.setLogin}/>}
 
                             <BackgroundImage/>
 

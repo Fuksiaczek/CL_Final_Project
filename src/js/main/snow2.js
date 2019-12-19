@@ -28,7 +28,7 @@ class Snow2 extends Component {
         {
 
         const array = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 500; i++) {
             array.push(".")
         }
         this.setState({
@@ -41,17 +41,24 @@ class Snow2 extends Component {
         {
             let font;
             let left;
+            let animationDuration;
+            let animationNum;
+            let animationDelay;
 
             const {snowArray} = this.state;
 
             for (let i = 0; i < snowArray.length; i++) {
 
                 font = `${(Math.floor((Math.random() * (50 - 10)) + 50))}px`;
-                left = `${(Math.floor(Math.random() * (70 - -70)) + -70)}%`;
+                left = `${(Math.floor(Math.random() * (100 - 0)) + 0)}%`;
+                animationDuration = `${(Math.floor(Math.random() * (10 - 8)) + 8)}s`;
+                animationDelay = `${(Math.floor(Math.random() * (20 - 1)) + 1)}s`;
+                animationNum = `${(Math.floor(Math.random() * (20 - 5)) + 5)}`;
             }
             return (
                 {fontSize: font,
-                animation: "fall 15s linear infinite",
+                animation: `fall${animationNum} 15s linear infinite`,
+                animationDelay: animationDelay,
                 left: left,}
             );
         };

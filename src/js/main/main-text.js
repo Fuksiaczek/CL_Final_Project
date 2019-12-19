@@ -73,8 +73,8 @@ class MainText extends Component
                     <div className="h2">
                         <h2>TO CHRISTMAS IT'S LEFT</h2>
                         <h2>
-                            {currentDay} {currentDay !== 1 ? "DAYS" : "DAY"}
-                            &nbsp;AND {currentHour}:{currentMinute} HOURS
+                            <span>{currentDay}</span> {currentDay !== 1 ? "DAYS" : "DAY"}
+                            &nbsp;AND <span>{currentHour}:{currentMinute}</span> HOURS
                         </h2>
                         <button className="lor-btn"
                         style={this.state.styleSnowBtn}

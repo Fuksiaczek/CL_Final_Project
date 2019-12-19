@@ -35,10 +35,10 @@ class Header extends Component {
 
     render() {
         const {isLogIn, login} = this.props;
-        const {styleLinkHover} = this.state
+        const {styleLinkHover} = this.state;
         return (
             <>
-                {isLogIn &&
+                {(isLogIn || login) &&
                 <header className="container">
                     <section className="header">
                         <nav>

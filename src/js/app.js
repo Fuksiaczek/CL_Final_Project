@@ -13,16 +13,32 @@ import Game1 from "./game1/game1";
 
 import './../sass/style.scss';
 
-function App()
+class App extends Component
 {
-    return (
-        <HashRouter>
-            <>
-                <Route exact path='/' component={Main} />
-                <Route path='/game1' component={Game1} />
-            </>
-        </HashRouter>
-    )
+    state =
+        {
+            login: ""
+        }
+
+    setLogin = (user) =>
+    {
+        this.setState({
+            login: user
+        })
+    }
+
+    render() {
+        return (
+            <HashRouter>
+                <>
+                    <Route exact path='/' render={() => <Main setLogin={this.setLogin} login={this.state.login}/>} />
+                    <Route path='/game1' render={() => <Game1 login={this.state.login}/>}/>
+                </>
+            </HashRouter>
+        )
+    }
+
+
 }
 
 ReactDOM.render(

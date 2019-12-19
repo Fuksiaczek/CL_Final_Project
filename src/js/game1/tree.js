@@ -11,12 +11,15 @@ class Tree extends Component
         const {treeGrow} = this.props;
         return(
             <>
-                <div className="tree">
-                    <div className="tree-triangle"></div>
+                <div className="trees">
+                    <div className="tree">
+                        <div className="tree-triangle"></div>
+                    </div>
+                    <div className={"tree"+treeGrow}>
+                        <div className={"tree-triangle"+treeGrow}></div>
+                    </div>
                 </div>
-                <div className={"tree"+treeGrow}>
-                    <div className={"tree-triangle"+treeGrow}></div>
-                </div>
+
             </>
         )
     }

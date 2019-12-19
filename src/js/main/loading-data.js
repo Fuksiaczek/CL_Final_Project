@@ -42,10 +42,14 @@ class LoadingData extends Component
             };
 
         return(
-
-            <div className="progress">
-                {widthState !== 100 &&
-                    <div className="progress-bar" style={divStyle}></div>}
+            <div>
+                <h2>LOADING YOUR WISHES...</h2>
+                <div className="progress">
+                    {widthState !== 100 &&
+                        <>
+                            <div className="progress-bar" style={divStyle}></div>
+                        </>}
+                </div>
             </div>
         )
     }

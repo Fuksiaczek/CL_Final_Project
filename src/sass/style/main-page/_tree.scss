@@ -3,7 +3,20 @@
 
 .grow-btn
 {
-  margin-bottom: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 200px;
+}
+
+
+.trees
+{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 //tree2
@@ -58,55 +71,6 @@
 }
 
 //tree3
-//.tree3
-//{
-//  height: $base*(18+9);
-//  width: $base*(20+10);
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  position: absolute;
-//  bottom: 35px;
-//
-//
-//  .tree-triangle3
-//  {
-//    border-left: $base*(6+3) solid transparent;
-//    border-right: $base*(6+3) solid transparent;
-//    border-bottom: $base*(8+4) solid $color-tree3;
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//    @include base-tree;
-//    padding-top: $base*(2+1);
-//
-//  }
-//  .tree-triangle3::before
-//  {
-//    content: '';
-//    display: block;
-//    border-left: $base*(8+4) solid transparent;
-//    border-right: $base*(8+4) solid transparent;
-//    border-bottom: $base*(10+5) solid $color-tree3;
-//    @include base-tree;
-//    left: $base*(4+2);
-//    top: $base*(8+4);
-//  }
-//
-//  .tree-triangle3::after
-//  {
-//    content: '';
-//    display: block;
-//    border-left: $base*(4+2) solid transparent;
-//    border-right: $base*(4+2) solid transparent;
-//    border-bottom: $base*(6+3) solid $color-tree3;
-//    @include base-tree;
-//    top: 0;
-//    right: $base*(8+4);
-//  }
-//
-//}
-
 
 .tree3
 {
@@ -262,5 +226,6 @@
   }
 
 }
+
 
 

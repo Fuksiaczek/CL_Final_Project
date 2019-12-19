@@ -15,6 +15,7 @@ import Tree from "./tree";
 
 import Header from "../main/header";
 import Lights from "./lights";
+import Star from "./star";
 
 
 class TreeDress extends Component
@@ -23,7 +24,8 @@ class TreeDress extends Component
         {
             styleGrowBtn: {},
             treeGrow: 1,
-            lightsOn: false
+            lightsOn: false,
+            isStar: false
         }
 
     EnterGrowBtn = () => {
@@ -57,47 +59,57 @@ class TreeDress extends Component
 
     HandleLightsBtn = () =>
     {
-        this.setState({
-            treeGrow: this.state.treeGrow + 1
-        });
-
-        if(this.state.treeGrow === 4)
-        {
             this.setState({
-                treeGrow: 4
+                lightsOn: true
             });
-        }
+    };
 
-        console.log(this.state.treeGrow);
+    HandleStarBtn = () =>
+    {
+        this.setState({
+            isStar: true
+        });
     };
 
 
-
-
-
     render() {
-        const {styleGrowBtn} = this.state;
+        const {styleGrowBtn, lightsOn, treeGrow, isStar} = this.state;
+        const {login} = this.props;
         return(
             <>
-                <Header/>
+                <Header login={login}/>
                 <section className="background-image ">
                     <div className="container">
                         <div className="sky">
-                            {this.state.treeGrow === 4 ?
-                            <button className="lor-btn grow-btn"
-                                    onClick={this.HandleGrowBtn}
+
+                            {isStar &&
+                            <div className="holiday-box">
+                                <h1 className="holiday">
+                                <p>{login.toUpperCase()}</p>
+                                WE WISH YOU <br/> A HAPPY HOLIDAYS!</h1>
+                            </div>}
+                            {treeGrow === 4 ?
+                                (!lightsOn && <button className="lor-btn grow-btn"
+                                    onClick={this.HandleLightsBtn}
                                     onMouseLeave={this.LeaveGrowBtn}
                                     style={styleGrowBtn}
                                     onMouseEnter={this.EnterGrowBtn}>TURN ON THE LIGHTS
-                            </button>:
-                            <button className="lor-btn grow-btn"
+                            </button>):
+                                <button className="lor-btn grow-btn"
                                     onClick={this.HandleGrowBtn}
                                     onMouseLeave={this.LeaveGrowBtn}
                                     style={styleGrowBtn}
                                     onMouseEnter={this.EnterGrowBtn}>GROW
                             </button>}
-
-                            <Lights treeGrow={this.state.treeGrow}/>
+                            {(lightsOn && !isStar) &&
+                                <button className="lor-btn grow-btn"
+                                        onClick={this.HandleStarBtn}
+                                        onMouseLeave={this.LeaveGrowBtn}
+                                        style={styleGrowBtn}
+                                        onMouseEnter={this.EnterGrowBtn}>PUT THE STAR
+                                </button>}
+                            {isStar && <Star/>}
+                            {lightsOn && <Lights/>}
                             <Tree treeGrow={this.state.treeGrow}/>
                             <BackgroundImage/>
                         </div>
