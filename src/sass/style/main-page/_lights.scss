@@ -1,0 +1,58 @@
+@import './../general/variables';
+
+
+.light-bulbs-container
+{
+
+  //background: rgba(229, 242, 38, 0.37);
+  height: 330px;
+  width: 250px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  justify-self: center;
+
+
+
+  .light-bulb {
+    dispalay: flex;
+    position: absolute;
+    color: $color-main1;
+    animation: glow 10s infinite;
+
+  }
+  .light-bulb-shadow {
+    dispalay: flex;
+    position: absolute;
+    color: $color-main1;
+    text-shadow: 0 0 13px $color-main1;
+    animation: glow 10s infinite;
+
+  }
+}
+
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+    transform: scale(0.5);
+    text-shadow: 0 0 13px $color-main1;
+  }
+  33% {
+    opacity: 0.5;
+    transform: scale(1);
+    text-shadow: 0 0 30px $color-main1;
+  }
+  66% {
+
+    opacity: 1;
+    transform: scale(2);
+    text-shadow: 0 0 5px $color-main1;
+  }
+  100% {
+
+    opacity: 0.5;
+    transform: scale(1);
+    text-shadow: 0 0 20px $color-main1;
+  }
+}

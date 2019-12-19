@@ -1,0 +1,266 @@
+@import '../general/variables';
+@import '/background-img';
+
+.grow-btn
+{
+  margin-bottom: 400px;
+}
+
+//tree2
+.tree2
+{
+  height: $base*18;
+  width: $base*20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35px;
+  z-index: 1;
+
+
+  .tree-triangle2
+  {
+    border-left: $base*6 solid transparent;
+    border-right: $base*6 solid transparent;
+    border-bottom: $base*8 solid $color-tree3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include base-tree;
+    padding-top: $base*2;
+
+  }
+  .tree-triangle2::before
+  {
+    content: '';
+    display: block;
+    border-left: $base*8 solid transparent;
+    border-right: $base*8 solid transparent;
+    border-bottom: $base*10 solid $color-tree3;
+    @include base-tree;
+    left: $base*4;
+    top: $base*8;
+  }
+
+  .tree-triangle2::after
+  {
+    content: '';
+    display: block;
+    border-left: $base*4 solid transparent;
+    border-right: $base*4 solid transparent;
+    border-bottom: $base*6 solid $color-tree3;
+    @include base-tree;
+    top: 0;
+    right: $base*8;
+  }
+
+}
+
+//tree3
+//.tree3
+//{
+//  height: $base*(18+9);
+//  width: $base*(20+10);
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: absolute;
+//  bottom: 35px;
+//
+//
+//  .tree-triangle3
+//  {
+//    border-left: $base*(6+3) solid transparent;
+//    border-right: $base*(6+3) solid transparent;
+//    border-bottom: $base*(8+4) solid $color-tree3;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    @include base-tree;
+//    padding-top: $base*(2+1);
+//
+//  }
+//  .tree-triangle3::before
+//  {
+//    content: '';
+//    display: block;
+//    border-left: $base*(8+4) solid transparent;
+//    border-right: $base*(8+4) solid transparent;
+//    border-bottom: $base*(10+5) solid $color-tree3;
+//    @include base-tree;
+//    left: $base*(4+2);
+//    top: $base*(8+4);
+//  }
+//
+//  .tree-triangle3::after
+//  {
+//    content: '';
+//    display: block;
+//    border-left: $base*(4+2) solid transparent;
+//    border-right: $base*(4+2) solid transparent;
+//    border-bottom: $base*(6+3) solid $color-tree3;
+//    @include base-tree;
+//    top: 0;
+//    right: $base*(8+4);
+//  }
+//
+//}
+
+
+.tree3
+{
+  height: $base*(18+9);
+  width: $base*(20+10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35px;
+  left: 37%;
+  z-index: 1;
+
+
+  .tree-triangle3
+  {
+    border-left: $base*(6+3) solid transparent;
+    border-right: $base*(6+3) solid transparent;
+    border-bottom: $base*(8+4) solid $color-tree3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include base-tree;
+    padding-top: $base*(2+1);
+
+  }
+  .tree-triangle3::before
+  {
+    content: '';
+    display: block;
+    border-left: $base*(8+4) solid transparent;
+    border-right: $base*(8+4) solid transparent;
+    border-bottom: $base*(10+5) solid $color-tree3;
+    @include base-tree;
+    left: $base*(4+2);
+    top: $base*(8+4);
+  }
+
+  .tree-triangle3::after
+  {
+    content: '';
+    display: block;
+    border-left: $base*(4+2) solid transparent;
+    border-right: $base*(4+2) solid transparent;
+    border-bottom: $base*(6+3) solid $color-tree3;
+    @include base-tree;
+    top: 0;
+    right: $base*(8+4);
+  }
+
+}
+
+
+
+//tree4
+.tree4
+{
+  height: $base*(18+9);
+  width: $base*(20+10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35*2.5px;
+  z-index: 1;
+
+  .tree-triangle4
+  {
+    border-left: $base*(6+6) solid transparent;
+    border-right: $base*(6+6) solid transparent;
+    border-bottom: $base*(8+8) solid $color-tree3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include base-tree;
+    padding-top: $base*(2+2);
+
+  }
+  .tree-triangle4::before
+  {
+    content: '';
+    display: block;
+    border-left: $base*(8+8) solid transparent;
+    border-right: $base*(8+8) solid transparent;
+    border-bottom: $base*(10+10) solid $color-tree3;
+    @include base-tree;
+    left: $base*(4+4);
+    top: $base*(8+8);
+  }
+
+  .tree-triangle4::after
+  {
+    content: '';
+    display: block;
+    border-left: $base*(4+4) solid transparent;
+    border-right: $base*(4+4) solid transparent;
+    border-bottom: $base*(6+6) solid $color-tree3;
+    @include base-tree;
+    top: 0;
+    right: $base*(8+8);
+  }
+
+}
+
+
+//tree5
+.tree5
+{
+  height: $base*(18*2);
+  width: $base*(20*2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35*2.5px;
+  left: 33%;
+  z-index: 1;
+
+  .tree-triangle5
+  {
+    border-left: $base*(6+6+3) solid transparent;
+    border-right: $base*(6+6+3) solid transparent;
+    border-bottom: $base*(8+8+4) solid $color-tree3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include base-tree;
+    padding-top: $base*(2+2+2);
+
+  }
+  .tree-triangle5::before
+  {
+    content: '';
+    display: block;
+    border-left: $base*(8+8+4) solid transparent;
+    border-right: $base*(8+8+4) solid transparent;
+    border-bottom: $base*(10+10+5) solid $color-tree3;
+    @include base-tree;
+    left: $base*(4+4+2);
+    top: $base*(8+8+4);
+  }
+
+  .tree-triangle5::after
+  {
+    content: '';
+    display: block;
+    border-left: $base*(4+4+2) solid transparent;
+    border-right: $base*(4+4+2) solid transparent;
+    border-bottom: $base*(6+6+3) solid $color-tree3;
+    @include base-tree;
+    top: 0;
+    right: $base*(8+8+4);
+  }
+
+}
+
+

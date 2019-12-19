@@ -1,0 +1,67 @@
+@import './../general/variables';
+
+.header {
+  height: 70px;
+  width: 100%;
+  background: $color-light;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 40px;
+
+  .fa-user {
+    color: $color-tree3;
+    padding-left: 30px;
+  }
+
+  .log-in-data {
+    display: flex;
+    align-items: center;
+
+
+    h2 {
+      color: $color-tree3;
+      font-size: 1.2rem;
+
+    }
+    h3
+    {
+      padding-left: 10px;
+    }
+  }
+}
+
+nav
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    li{
+      padding-right: 20px;
+
+      a
+      {
+        color: $color-tree3;
+      }
+      a:hover
+      {
+        color: $color-main3-contrast;
+        text-shadow: 0 0 10px $color-main1;
+      }
+    }
+  }
+}
+
+

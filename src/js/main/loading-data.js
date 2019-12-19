@@ -23,7 +23,7 @@ class LoadingData extends Component
                 this.props.setLogStatus();
                 clearInterval(this.intervalId)
             }
-        }, 100);
+        }, 50);
 
 
 

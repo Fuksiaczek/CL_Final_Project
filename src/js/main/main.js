@@ -7,6 +7,8 @@ import LoginOrRegister from "./login-or-register";
 
 import Snow from "./snow";
 
+import Header from "./header";
+
 import './../../sass/style.scss';
 
 import users from "./../data/users";
@@ -39,16 +41,8 @@ class Main extends Component{
         const {isLogIn, login} = this.state;
         return(
             <>
-                {isLogIn &&
-                <header className="container">
-                    <section className="header">
-                        <div></div>
-                        <div className="log-in-data">
-                            <h2>{login}</h2>
-                            <i className="fas fa-2x fa-user"></i>
-                        </div>
-                    </section>
-                </header>}
+
+                <Header isLogIn={isLogIn} login={login}/>
 
                 <section className="background-image ">
                     <div className="container">

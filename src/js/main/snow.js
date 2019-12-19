@@ -9,13 +9,13 @@ const Snowflake = (props) =>{
             .
         </p>
     )
-}
+};
 
 class Snow extends Component {
     snow=()=>{
         let animationDelay = '0s';
         let fontSize = '200px';
-        let arr = Array.from('************************************************************************************************************************************************************************************************')
+        let arr = Array.from('*****************************************************************')
         return arr.map((el, i)=>{
             animationDelay = `${(Math.random()*100).toFixed(2)}s`;
             fontSize = `${(Math.floor(Math.random()*10) + 40)}px`;
@@ -23,10 +23,10 @@ class Snow extends Component {
             let style = {
                 animationDelay,
                 fontSize
-            }
+            };
             return (<Snowflake key={i} id={i} style={style}/>)
         })
-    }
+    };
 
     render(){
         return(
