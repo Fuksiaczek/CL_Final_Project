@@ -5,6 +5,7 @@ import LoadingData from "./loading-data";
 
 import './../../sass/style.scss';
 import users from "../data/users";
+import {Link} from "react-router-dom";
 
 
 class LogIn extends Component
@@ -16,7 +17,9 @@ class LogIn extends Component
             uPassword: "",
             pass: "",
             submit: "",
-            styleLogInBtn: {}
+            styleLogInBtn: {},
+            styleGoBackBtn: {},
+            goBack: false
         };
 
     HandleChangeLogin = (e) =>
@@ -74,7 +77,9 @@ class LogIn extends Component
 
     EnterLogInBtn = () => {
         this.setState({
-            styleLogInBtn: {background: "#911719"}
+            styleLogInBtn: {
+                background: "#911719",
+                cursor: "pointer"}
         });
     };
 
@@ -84,6 +89,24 @@ class LogIn extends Component
         });
     };
 
+    EnterGoBackBtn = () => {
+        this.setState({
+            styleGoBackBtn: {
+                background: "#911719",
+                cursor: "pointer"}
+        });
+    };
+
+    LeaveGoBackBtn = () => {
+        this.setState({
+            styleGoBackBtn: {}
+        });
+    };
+
+    HandleGoBackBtn = (e) => {
+        e.preventDefault();
+        this.props.isGoBackLog();
+    };
 
 
 
@@ -93,7 +116,7 @@ class LogIn extends Component
         return(
             <>
                 <div className="lor-background">
-                    {submit !== true ?
+                    {(submit !== true) ?
                         <>
                             <form onSubmit={this.SubmitLogIn}>
                                 <label>LOGIN</label>
@@ -112,14 +135,22 @@ class LogIn extends Component
                                        style={this.state.styleLogInBtn}
                                        onMouseEnter={this.EnterLogInBtn}
                                        onMouseLeave={this.LeaveLogInBtn}/>
+                                <button className="back-btn"
+                                        onMouseEnter={this.EnterGoBackBtn}
+                                        onMouseLeave={this.LeaveGoBackBtn}
+                                        onClick={this.HandleGoBackBtn}
+                                        style={this.state.styleGoBackBtn}>
+                                        <i className="fas fa-chevron-left"/> GO BACK
+                                </button>
                             </form>
                     </> :
+
                     <>
                         <LoadingData setLogStatus={this.props.setLogStatus}/>
                     </>}
                 </div>
                 <div>
-                    {submit === false && <h3>Niepoprawny login lub hasło</h3> }
+                    {(submit === false) && <h3>Niepoprawny login lub hasło</h3> }
                 </div>
             </>
          )

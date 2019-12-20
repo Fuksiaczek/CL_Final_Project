@@ -9,7 +9,6 @@ import TreeDress from "./tree-dress";
 class Game1 extends Component
 {
 
-
     render() {
         return(
             <>

@@ -36,7 +36,9 @@ class MainText extends Component
 
     EnterSnowBtn = () => {
         this.setState({
-            styleSnowBtn: {background: "#911719"}
+            styleSnowBtn: {
+                background: "#911719",
+                cursor: "pointer"}
         });
     };
 
@@ -71,11 +73,12 @@ class MainText extends Component
                 <div className="text">
                     <h1>Merry Christmas</h1>
                     <div className="h2">
-                        <h2>TO CHRISTMAS IT'S LEFT</h2>
+
                         <h2>
                             <span>{currentDay}</span> {currentDay !== 1 ? "DAYS" : "DAY"}
                             &nbsp;AND <span>{currentHour}:{currentMinute}</span> HOURS
                         </h2>
+                        <h2>LEFT FOR CHRISTMAS</h2>
                         <button className="lor-btn"
                         style={this.state.styleSnowBtn}
                         onMouseEnter={this.EnterSnowBtn}

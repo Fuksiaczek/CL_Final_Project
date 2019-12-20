@@ -122,7 +122,23 @@
         color: $color-light;
         font-weight: 700;
         font-size: 1rem;
+        line-height: 1.1rem;
+        z-index: 3;
+      }
 
+      .back-btn {
+        line-height: 10px;
+        align-self: center;
+        width: 100%;
+        padding: 10px;
+        margin: 0 0 10px 0;
+        border-radius: 20px;
+        background: $color-main3-contrast;
+        color: $color-light;
+        font-weight: 700;
+        font-size: 1rem;
+        word-spacing: 0.5rem;
+        z-index: 3;
       }
     }
   }
@@ -148,14 +164,17 @@
   flex-direction: column;
   margin-bottom: 10%;
 
+
   .progress
   {
     width: 100%;
+    border-radius: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    border: 3px solid $color-main2
+    border: 3px solid $color-main2;
+    overflow: hidden;
   }
 
   h2

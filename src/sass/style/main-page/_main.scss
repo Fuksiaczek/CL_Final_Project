@@ -60,18 +60,20 @@
       text-align: justify-all;
       letter-spacing: 0.4rem;
       font-size: 1.2rem;
-      word-spacing: 0.7rem;
+      word-spacing: 0.1rem;
       line-height: 1.5rem;
 
       span
       {
         font-size: 1.5rem;
+        text-shadow: 0 0 20px $color-main1 ;
       }
     }
     .h2 h2:nth-of-type(2)
     {
-      word-spacing: 0.1rem;
+      word-spacing: 1.5rem;
       margin-bottom: 70px;
+      margin-top: 5px;
     }
   }
 
@@ -81,7 +83,7 @@
 
 
 h1{
-  font-size: 7rem;
+  font-size: 7.2rem;
 }
 
 .App{

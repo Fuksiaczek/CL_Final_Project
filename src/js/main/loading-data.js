@@ -38,6 +38,7 @@ class LoadingData extends Component
             {
                 width: widthState + "%",
                 height: "30px",
+
                 background: "#b81719"
             };
 

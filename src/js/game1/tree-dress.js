@@ -30,7 +30,9 @@ class TreeDress extends Component
 
     EnterGrowBtn = () => {
         this.setState({
-            styleGrowBtn: {background: "#911719"},
+            styleGrowBtn: {
+                background: "#911719",
+                cursor: "pointer"},
         });
     };
 

@@ -16,13 +16,16 @@ class Header extends Component {
 
     state =
         {
-            styleLinkHover: {}
-        }
+            styleLinkHover: {},
+            menuEnter: false
+        };
     EnterMenuLink = () => {
         this.setState({
             styleLinkHover:
                 {
-                    textShadow: "0px 0px 20px 4px #b81719"
+                    color: "#B81719",
+                    textShadow: "0 0 10px #D4AF37",
+                    cursor: "pointer"
                 }
         });
     };
@@ -33,26 +36,50 @@ class Header extends Component {
         });
     };
 
+    HandleMenuLink  = () => {
+
+        if (this.state.menuEnter)
+        {
+            this.setState({
+                menuEnter: false
+            })
+        }
+        else
+        {
+            this.setState({
+                menuEnter: true
+            })
+        }
+    };
+
     render() {
         const {isLogIn, login} = this.props;
-        const {styleLinkHover} = this.state;
+        const {styleLinkHover, menuEnter} = this.state;
         return (
             <>
                 {(isLogIn || login) &&
                 <header className="container">
                     <section className="header">
+
+                        <div>
+                            <i
+                                onMouseEnter={this.EnterMenuLink}
+                                onMouseLeave={this.LeaveMenuLink}
+                                onClick={this.HandleMenuLink}
+                                style={styleLinkHover}
+                                className="fas fa-2x fa-bars"/>
+                        </div>
+                        {menuEnter &&
                         <nav>
                             <ul>
                                 <li>
-                                    <Link style={styleLinkHover}
-                                          to="/">HOME</Link>
+                                    <Link to="/">HOME</Link>
                                 </li>
                                 <li>
-                                    <Link style={styleLinkHover}
-                                          to="/game1">DRESS YOUR TREE</Link>
+                                    <Link to="/game1">DRESS YOUR TREE</Link>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav>}
                         <div className="log-in-data">
                             <h2>{login}</h2>
                             <i className="fas fa-2x fa-user"></i>

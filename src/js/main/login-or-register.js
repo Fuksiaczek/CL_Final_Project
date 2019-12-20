@@ -25,7 +25,9 @@ class LoginOrRegister extends Component
 
     EnterLogInBtn = () => {
         this.setState({
-            styleLogIn: {background: "#911719"}
+            styleLogIn: {
+                background: "#911719",
+                cursor: "pointer"}
         });
     };
 
@@ -37,7 +39,9 @@ class LoginOrRegister extends Component
 
     EnterRegisterBtn = () => {
         this.setState({
-            styleRegister: {background: "#911719"}
+            styleRegister: {
+                background: "#911719",
+                cursor: "pointer"}
         });
     };
 
@@ -54,6 +58,19 @@ class LoginOrRegister extends Component
         })
     };
 
+    isGoBackLog = () =>
+    {
+        this.setState({
+            toLog: false
+        })
+    };
+
+    isGoBackRegister = () =>
+    {
+        this.setState({
+            toRegister: false
+        })
+    }
 
 
     render() {
@@ -64,8 +81,10 @@ class LoginOrRegister extends Component
                 <div className="login-or-register">
                     {toLog && <LogIn usersLogIn={usersLogIn}
                                      setLogStatus={this.props.setLogStatus}
-                                     setLogin={this.props.setLogin}/>}
-                    {toRegister && <Register usersLogIn={usersLogIn}/>}
+                                     setLogin={this.props.setLogin}
+                                     isGoBackLog={this.isGoBackLog}/>}
+                    {toRegister && <Register usersLogIn={usersLogIn}
+                                             isGoBackRegister={this.isGoBackRegister}/>}
                     {!(toLog || toRegister) &&
                         <>
                     <button className="log-in-btn lor-btn"

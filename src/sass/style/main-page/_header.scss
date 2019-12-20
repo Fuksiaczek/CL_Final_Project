@@ -38,18 +38,25 @@ nav
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0;
+  top: 70px;
 
   ul
   {
+    background: rgba(239, 239, 239, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    //align-items: center;
+    flex-direction: column;
     font-weight: 700;
     letter-spacing: 0.1rem;
+    padding: 20px 40px 0 40px;
+    //padding-right: 20px;
 
     li{
-      padding-right: 20px;
+      //padding-right: 20px;
+      padding-bottom: 30px;
 
       a
       {
