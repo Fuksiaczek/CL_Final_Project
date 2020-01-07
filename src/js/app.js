@@ -8,8 +8,8 @@ import {
     NavLink,
 } from 'react-router-dom';
 
-import Main from "./main/main";
-import Game1 from "./game1/game1";
+import PageMain from "./components/page-main/page-main";
+import TreeDress from "./components/page-dress-tree/page-dress-tree";
 
 import './../sass/style.scss';
 
@@ -27,12 +27,27 @@ class App extends Component
         })
     }
 
+    setClearLogin = () =>
+    {
+        this.setState({
+            login: "",
+        })
+    };
+
+
     render() {
         return (
             <HashRouter>
                 <>
-                    <Route exact path='/' render={() => <Main setLogin={this.setLogin} login={this.state.login}/>} />
-                    <Route path='/game1' render={() => <Game1 login={this.state.login}/>}/>
+                    <Route exact path='/'
+                           render={() => <PageMain
+                               setLogin={this.setLogin}
+                               login={this.state.login}
+                               setClearLogin={this.setClearLogin}/>} />
+                    <Route path='/game1'
+                           render={() => <TreeDress
+                                login={this.state.login}
+                                setClearLogin={this.setClearLogin}/>}/>
                 </>
             </HashRouter>
         )

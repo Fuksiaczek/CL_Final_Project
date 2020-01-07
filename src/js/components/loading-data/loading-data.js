@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
 class LoadingData extends Component
 {
@@ -44,12 +44,12 @@ class LoadingData extends Component
 
         return(
             <div className="progress-box">
-                <i className="far fa-9x fa-snowflake"></i>
-                <h2>WE LOADING YOUR CHRISTMAS WISHES...</h2>
+                <i className="far fa-9x fa-snowflake"/>
+                <h2>WE ARE LOADING YOUR CHRISTMAS WISHES...</h2>
                 <div className="progress">
                     {widthState !== 100 &&
                         <>
-                            <div className="progress-bar" style={divStyle}></div>
+                            <div className="progress-bar" style={divStyle}/>
                         </>}
                 </div>
             </div>

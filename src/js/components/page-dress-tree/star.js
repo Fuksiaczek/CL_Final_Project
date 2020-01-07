@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import '../../sass/style.scss';
+import '../../../sass/style.scss';
 
 class Star extends Component
 {
@@ -13,8 +13,8 @@ class Star extends Component
         return(
             <>
                 <div className="star-box">
-                    <div className="star-shadow"></div>
-                    <div className="star"></div>
+                    <div className="star-shadow"/>
+                    <div className="star"/>
                 </div>
             </>
         )

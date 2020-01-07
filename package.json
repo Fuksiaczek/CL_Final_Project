@@ -1,7 +1,7 @@
 {
-  "name": "1_Przygotowanie_React",
+  "name": "christmas_tree_app",
   "version": "1.0.0",
-  "description": "## Zadanie rozwiązywane z wykładowcą",
+  "description": "CL_Final_Project",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

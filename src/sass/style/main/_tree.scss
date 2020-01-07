@@ -36,7 +36,7 @@
   {
     border-left: $base*6 solid transparent;
     border-right: $base*6 solid transparent;
-    border-bottom: $base*8 solid $color-tree3;
+    border-bottom: $base*8 solid $color-tree-dark;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@
     display: block;
     border-left: $base*8 solid transparent;
     border-right: $base*8 solid transparent;
-    border-bottom: $base*10 solid $color-tree3;
+    border-bottom: $base*10 solid $color-tree-dark;
     @include base-tree;
     left: $base*4;
     top: $base*8;
@@ -62,7 +62,7 @@
     display: block;
     border-left: $base*4 solid transparent;
     border-right: $base*4 solid transparent;
-    border-bottom: $base*6 solid $color-tree3;
+    border-bottom: $base*6 solid $color-tree-dark;
     @include base-tree;
     top: 0;
     right: $base*8;
@@ -89,7 +89,7 @@
   {
     border-left: $base*(6+3) solid transparent;
     border-right: $base*(6+3) solid transparent;
-    border-bottom: $base*(8+4) solid $color-tree3;
+    border-bottom: $base*(8+4) solid $color-tree-dark;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +103,7 @@
     display: block;
     border-left: $base*(8+4) solid transparent;
     border-right: $base*(8+4) solid transparent;
-    border-bottom: $base*(10+5) solid $color-tree3;
+    border-bottom: $base*(10+5) solid $color-tree-dark;
     @include base-tree;
     left: $base*(4+2);
     top: $base*(8+4);
@@ -115,7 +115,7 @@
     display: block;
     border-left: $base*(4+2) solid transparent;
     border-right: $base*(4+2) solid transparent;
-    border-bottom: $base*(6+3) solid $color-tree3;
+    border-bottom: $base*(6+3) solid $color-tree-dark;
     @include base-tree;
     top: 0;
     right: $base*(8+4);
@@ -141,7 +141,7 @@
   {
     border-left: $base*(6+6) solid transparent;
     border-right: $base*(6+6) solid transparent;
-    border-bottom: $base*(8+8) solid $color-tree3;
+    border-bottom: $base*(8+8) solid $color-tree-dark;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +155,7 @@
     display: block;
     border-left: $base*(8+8) solid transparent;
     border-right: $base*(8+8) solid transparent;
-    border-bottom: $base*(10+10) solid $color-tree3;
+    border-bottom: $base*(10+10) solid $color-tree-dark;
     @include base-tree;
     left: $base*(4+4);
     top: $base*(8+8);
@@ -167,7 +167,7 @@
     display: block;
     border-left: $base*(4+4) solid transparent;
     border-right: $base*(4+4) solid transparent;
-    border-bottom: $base*(6+6) solid $color-tree3;
+    border-bottom: $base*(6+6) solid $color-tree-dark;
     @include base-tree;
     top: 0;
     right: $base*(8+8);
@@ -193,7 +193,7 @@
   {
     border-left: $base*(6+6+3) solid transparent;
     border-right: $base*(6+6+3) solid transparent;
-    border-bottom: $base*(8+8+4) solid $color-tree3;
+    border-bottom: $base*(8+8+4) solid $color-tree-dark;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +207,7 @@
     display: block;
     border-left: $base*(8+8+4) solid transparent;
     border-right: $base*(8+8+4) solid transparent;
-    border-bottom: $base*(10+10+5) solid $color-tree3;
+    border-bottom: $base*(10+10+5) solid $color-tree-dark;
     @include base-tree;
     left: $base*(4+4+2);
     top: $base*(8+8+4);
@@ -219,7 +219,7 @@
     display: block;
     border-left: $base*(4+4+2) solid transparent;
     border-right: $base*(4+4+2) solid transparent;
-    border-bottom: $base*(6+6+3) solid $color-tree3;
+    border-bottom: $base*(6+6+3) solid $color-tree-dark;
     @include base-tree;
     top: 0;
     right: $base*(8+8+4);

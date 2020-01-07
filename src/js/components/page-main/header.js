@@ -8,17 +8,21 @@ import {
     NavLink,
 } from 'react-router-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
-import users from "./../data/users";
+import users from "../../../data/users";
+import PageMain from "./page-main";
 
 class Header extends Component {
 
     state =
         {
             styleLinkHover: {},
-            menuEnter: false
+            styleUserHover: {},
+            menuEnter: false,
+            userEnter: false,
         };
+
     EnterMenuLink = () => {
         this.setState({
             styleLinkHover:
@@ -52,9 +56,55 @@ class Header extends Component {
         }
     };
 
+    EnterUser = () => {
+        this.setState({
+            styleUserHover:
+                {
+                    color: "#B81719",
+                    textShadow: "0 0 10px #D4AF37",
+                    cursor: "pointer"
+                }
+        });
+    };
+
+    LeaveUser  = () => {
+        this.setState({
+            styleUserHover: {}
+        });
+    };
+
+
+    HandleUser  = () => {
+
+        if (this.state.userEnter)
+        {
+            this.setState({
+                userEnter: false
+            })
+        }
+        else
+        {
+            this.setState({
+                userEnter: true
+            })
+        }
+
+    };
+
+    HandleLogOut = () =>
+    {
+        this.props.setLogOut();
+        this.props.setClearLogin();
+
+        this.setState({
+            userEnter: false
+        })
+    };
+
+
     render() {
         const {isLogIn, login} = this.props;
-        const {styleLinkHover, menuEnter} = this.state;
+        const {styleLinkHover, menuEnter, userEnter, styleUserHover} = this.state;
         return (
             <>
                 {(isLogIn || login) &&
@@ -82,7 +132,18 @@ class Header extends Component {
                         </nav>}
                         <div className="log-in-data">
                             <h2>{login}</h2>
-                            <i className="fas fa-2x fa-user"></i>
+                            <i className="fas fa-2x fa-user"
+                               onMouseEnter={this.EnterUser}
+                               onMouseLeave={this.LeaveUser}
+                               onClick={this.HandleUser}
+                               style={styleUserHover}
+                            />
+                            {userEnter &&
+                                <ul>
+                                    <li>
+                                        <a onClick={this.HandleLogOut}>LOG OUT</a>
+                                    </li>
+                                </ul>}
                         </div>
                     </section>
                 </header>}

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import LoadingData from "./loading-data";
+import LoadingData from "../loading-data/loading-data";
 
-import './../../sass/style.scss';
-import users from "../data/users";
+import '../../../sass/style.scss';
+import users from "../../../data/users";
 import {Link} from "react-router-dom";
 
 
@@ -144,13 +144,12 @@ class LogIn extends Component
                                 </button>
                             </form>
                     </> :
-
                     <>
                         <LoadingData setLogStatus={this.props.setLogStatus}/>
                     </>}
                 </div>
                 <div>
-                    {(submit === false) && <h3>Niepoprawny login lub hasło</h3> }
+                    {(submit === false) && <h3>Invalid login or password</h3> }
                 </div>
             </>
          )

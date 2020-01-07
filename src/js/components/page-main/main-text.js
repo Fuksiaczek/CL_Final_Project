@@ -1,22 +1,20 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
-import Snow from "./snow";
-import Snow2 from "./snow2";
+import Snow from "../snow/snow";
 
 class MainText extends Component
 {
     state =
         {
-            currentDay: (24 - new Date().getDate()),
+            currentDay: ((366-8) - new Date().getDate()),
             currentHour: (24 - new Date().getHours()),
             currentMinute: (60 - new Date().getMinutes()),
-            //currentSecond: "",
             styleSnowBtn: {},
             letItSnow: false
-        }
+        };
 
     componentDidMount() {
 
@@ -69,14 +67,15 @@ class MainText extends Component
         const {currentDay, currentHour, currentMinute, currentSecond} = this.state;
         return(
             <>
-                {this.state.letItSnow && <Snow2/>}
+                {this.state.letItSnow && <Snow/>}
                 <div className="text">
                     <h1>Merry Christmas</h1>
                     <div className="h2">
 
                         <h2>
                             <span>{currentDay}</span> {currentDay !== 1 ? "DAYS" : "DAY"}
-                            &nbsp;AND <span>{currentHour}:{currentMinute}</span> HOURS
+                            &nbsp;AND <span>{currentHour<10 ? "0"+currentHour : currentHour}:
+                            {currentMinute<10 ? "0"+currentMinute : currentMinute}</span> HOURS
                         </h2>
                         <h2>LEFT FOR CHRISTMAS</h2>
                         <button className="lor-btn"

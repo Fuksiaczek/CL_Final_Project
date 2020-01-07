@@ -8,17 +8,17 @@ import {
     NavLink,
 } from 'react-router-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
-import BackgroundImage from "../main/background-image";
+import BackgroundImage from "../page-main/background-image";
 import Tree from "./tree";
 
-import Header from "../main/header";
+import Header from "../page-main/header";
 import Lights from "./lights";
 import Star from "./star";
 
 
-class TreeDress extends Component
+class DressTree extends Component
 {
     state =
         {
@@ -26,7 +26,7 @@ class TreeDress extends Component
             treeGrow: 1,
             lightsOn: false,
             isStar: false
-        }
+        };
 
     EnterGrowBtn = () => {
         this.setState({
@@ -76,10 +76,13 @@ class TreeDress extends Component
 
     render() {
         const {styleGrowBtn, lightsOn, treeGrow, isStar} = this.state;
-        const {login} = this.props;
+        const {login, isLogIn} = this.props;
         return(
             <>
-                <Header login={login}/>
+                <Header isLogIn={isLogIn}
+                        login={login}
+                        setLogOut={this.props.setLogOut}
+                        setClearLogin={this.props.setClearLogin}/>
                 <section className="background-image ">
                     <div className="container">
                         <div className="sky">
@@ -124,4 +127,4 @@ class TreeDress extends Component
 }
 
 
-export default TreeDress
+export default DressTree

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
 class Tree extends Component
 {
@@ -13,10 +13,10 @@ class Tree extends Component
             <>
                 <div className="trees">
                     <div className="tree">
-                        <div className="tree-triangle"></div>
+                        <div className="tree-triangle"/>
                     </div>
                     <div className={"tree"+treeGrow}>
-                        <div className={"tree-triangle"+treeGrow}></div>
+                        <div className={"tree-triangle"+treeGrow}/>
                     </div>
                 </div>
 

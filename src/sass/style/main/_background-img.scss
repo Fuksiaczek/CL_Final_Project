@@ -76,7 +76,7 @@
   {
     border-left: $base*3 solid transparent;
     border-right: $base*3 solid transparent;
-    border-bottom: $base*4 solid $color-tree3;
+    border-bottom: $base*4 solid $color-tree-dark;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +90,7 @@
     display: block;
     border-left: $base*4 solid transparent;
     border-right: $base*4 solid transparent;
-    border-bottom: $base*5 solid $color-tree3;
+    border-bottom: $base*5 solid $color-tree-dark;
     @include base-tree;
     left: $base*2;
     top: $base*4;
@@ -102,7 +102,7 @@
     display: block;
     border-left: $base*2 solid transparent;
     border-right: $base*2 solid transparent;
-    border-bottom: $base*3 solid $color-tree3;
+    border-bottom: $base*3 solid $color-tree-dark;
     @include base-tree;
     top: 0;
     right: $base*4;

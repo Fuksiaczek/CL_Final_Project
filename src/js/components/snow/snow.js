@@ -1,28 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
-class SnowFlake2 extends Component
-{
-    render(){
-        return(
-            <>
-                <p>.</p>
-            </>
-        )
-    }
-}
 
-class Snow2 extends Component {
+class Snow extends Component {
 
     state =
         {
             snowArray: []
         };
-
-
-
 
     componentDidMount()
         {
@@ -34,7 +21,6 @@ class Snow2 extends Component {
         this.setState({
             snowArray: array
             })
-
         }
 
         customSnowflake = () =>
@@ -72,12 +58,9 @@ class Snow2 extends Component {
                         {element}
                     </p>
                 )}
-
-
             </>
         )
     }
-
 }
 
-export default Snow2;
+export default Snow;

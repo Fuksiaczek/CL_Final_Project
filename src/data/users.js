@@ -10,9 +10,9 @@ export default [
     {
         id: 2,
         name: "Adam",
-        surname: "XXX",
-        email: "adam@wp.pl",
-        login: "Kotlet",
+        surname: "Kowalski",
+        email: "adamk@wp.pl",
+        login: "Elf",
         password: "4444",
     },
 

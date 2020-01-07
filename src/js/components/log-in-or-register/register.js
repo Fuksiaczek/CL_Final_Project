@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './../../sass/style.scss';
-import users from "./../data/users";
+import '../../../sass/style.scss';
+import users from "../../../data/users";
 
 class Register extends Component
 {

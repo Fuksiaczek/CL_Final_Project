@@ -11,18 +11,55 @@
   align-items: center;
   padding: 0 40px 0 40px;
 
+  i
+  {
+    color: $color-tree-dark
+  }
+
   .fa-user {
-    color: $color-tree3;
+    color: $color-tree-dark;
     padding-left: 30px;
   }
 
   .log-in-data {
     display: flex;
     align-items: center;
+    position: relative;
 
+    ul
+    {
+      position: absolute;
+      background: rgba(239, 239, 239, 0.5);
+      display: flex;
+      justify-content: center;
+      //align-items: center;
+      flex-direction: column;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      padding: 30px 40px 0 40px;
+      margin-right: -40px;
+      //padding-right: 20px;
+      right: 0;
+      top: 45px;
+
+      li{
+        //padding-right: 20px;
+        padding-bottom: 30px;
+
+        a
+        {
+          color: $color-tree-dark;
+        }
+        a:hover
+        {
+          color: $color-main3-contrast;
+          text-shadow: 0 0 10px $color-main1;
+        }
+      }
+    }
 
     h2 {
-      color: $color-tree3;
+      color: $color-tree-dark;
       font-size: 1.2rem;
 
     }
@@ -60,7 +97,7 @@ nav
 
       a
       {
-        color: $color-tree3;
+        color: $color-tree-dark;
       }
       a:hover
       {

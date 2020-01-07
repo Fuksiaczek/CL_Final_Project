@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import LogIn from "./log-in";
 import Register from "./register";
 
-import './../../sass/style.scss';
+import '../../../sass/style.scss';
 
 class LoginOrRegister extends Component
 {
@@ -70,7 +70,7 @@ class LoginOrRegister extends Component
         this.setState({
             toRegister: false
         })
-    }
+    };
 
 
     render() {
@@ -86,18 +86,18 @@ class LoginOrRegister extends Component
                     {toRegister && <Register usersLogIn={usersLogIn}
                                              isGoBackRegister={this.isGoBackRegister}/>}
                     {!(toLog || toRegister) &&
-                        <>
-                    <button className="log-in-btn lor-btn"
-                            onClick={this.HandleLogInBtn}
-                            onMouseLeave={this.LeaveLogInBtn}
-                            style={styleLogIn}
-                            onMouseEnter={this.EnterLogInBtn}>LOG IN</button>
-                    <button className="register-btn lor-btn"
-                            onClick={this.HandleRegisterBtn}
-                            onMouseLeave={this.LeaveRegisterBtn}
-                            style={styleRegister}
-                            onMouseEnter={this.EnterRegisterBtn}>REGISTER</button>
-                        </>}
+                    <>
+                        <button className="log-in-btn lor-btn"
+                                onClick={this.HandleLogInBtn}
+                                onMouseLeave={this.LeaveLogInBtn}
+                                style={styleLogIn}
+                                onMouseEnter={this.EnterLogInBtn}>LOG IN</button>
+                        <button className="register-btn lor-btn"
+                                onClick={this.HandleRegisterBtn}
+                                onMouseLeave={this.LeaveRegisterBtn}
+                                style={styleRegister}
+                                onMouseEnter={this.EnterRegisterBtn}>REGISTER</button>
+                    </>}
                 </div>
             </>
         )
