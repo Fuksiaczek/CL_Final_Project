@@ -1,7 +1,7 @@
 {
-  "name": "christmas_tree_app",
+  "name": "christmas_app",
   "version": "1.0.0",
-  "description": "CL_Final_Project",
+  "description": "Christmas app that helps users to prepare for Christmas",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fuksiaczek/Project-CL.git"
+    "url": "git+https://github.com/mfuks/Christmas_App.git"
   },
   "bugs": {
-    "url": "https://github.com/Fuksiaczek/Project-CL/issues"
+    "url": "https://github.com/mfuks/Christmas_App/issues"
   },
-  "homepage": "https://github.com/Fuksiaczek/Project-CL#readme"
+  "homepage": "https://github.com/mfuks/Christmas_App#readme"
 }

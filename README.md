@@ -1,16 +1,17 @@
-CodersLab course - final project
+## ChristmasApp
 
 This is a Christmas app that helps users to prepare for Christmas. Users can see how many days left until christmas, turn on the snow or dress a Christmas tree.
 
-Main project assumptions:
+### Main project assumptions:
 - all graphics are made in CSS using the SASS preprocesor
-- technologies used:
-	- JavaScript in ES6
-	- React
-	- React Router
-	- Webpack
+
+### Technologies used:
+- JavaScript in ES6
+- React
+- React Router
+- Webpack
 	
-Task in progress:
+### Task in progress:
 - logic
     - log out
     - registration

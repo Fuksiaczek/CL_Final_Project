@@ -20,10 +20,9 @@ class MainText extends Component
 
         this.intervalId = setInterval( () =>
                 this.setState({
-                    currentDay: (24 - new Date().getDate()),
+                    currentDay: (366-8 - new Date().getDate()),
                     currentHour: (24 - new Date().getHours()),
                     currentMinute: (60 - new Date().getMinutes()),
-                    //currentSecond: (60 - new Date().getSeconds())
                 }), 60000)
     }
 
