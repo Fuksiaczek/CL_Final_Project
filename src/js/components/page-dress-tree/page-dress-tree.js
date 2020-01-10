@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import '../../../sass/style.scss';
 
-import DressTree from "./tree-dress";
+import TreeDress from "./tree-dress";
 
-class PageDressTreePage extends Component
+class PageDressTree extends Component
 {
 
     render() {
@@ -17,4 +17,4 @@ class PageDressTreePage extends Component
     }
 }
 
-export default PageDressTreePage
+export default PageDressTree

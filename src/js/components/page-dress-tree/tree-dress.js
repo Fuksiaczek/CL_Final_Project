@@ -18,7 +18,7 @@ import Lights from "./lights";
 import Star from "./star";
 
 
-class DressTree extends Component
+class TreeDress extends Component
 {
     state =
         {
@@ -127,4 +127,4 @@ class DressTree extends Component
 }
 
 
-export default DressTree
+export default TreeDress
