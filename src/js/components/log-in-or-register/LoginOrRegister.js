@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
-import LogIn from "./log-in";
-import Register from "./register";
-
+import LogIn from "./LogIn";
+import Register from "./Register";
 import '../../../sass/style.scss';
 
 class LoginOrRegister extends Component

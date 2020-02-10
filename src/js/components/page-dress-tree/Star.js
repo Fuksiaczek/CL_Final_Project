@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
 import '../../../sass/style.scss';
 
 class Star extends Component
 {
-
-
-
     render() {
 
         return(

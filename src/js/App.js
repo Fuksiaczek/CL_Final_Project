@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter, Route} from 'react-router-dom';
 
-import PageMain from "./components/page-main/page-main";
-import PageDressTree from "./components/page-dress-tree/page-dress-tree";
+import PageMain from "./components/page-main/PageMain";
+import PageDressTree from "./components/page-dress-tree/PageDressTree";
 
 import './../sass/style.scss';
 

@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
-import LoadingData from "../loading-data/loading-data";
-
+import LoadingData from "../loading-data/LoadingData";
 import '../../../sass/style.scss';
-import users from "../../../data/users";
-import {Link} from "react-router-dom";
-
 
 class LogIn extends Component
 {
@@ -28,7 +22,6 @@ class LogIn extends Component
         this.setState({
             uLogin: e.target.value,
         });
-
     };
 
     HandleChangePassword = (e) =>
@@ -70,9 +63,6 @@ class LogIn extends Component
                 })
             }
         }
-
-
-
     };
 
     EnterLogInBtn = () => {
@@ -131,7 +121,9 @@ class LogIn extends Component
                                        value={usersLogIn.password}
                                        placeholder="your password"
                                        onChange={this.HandleChangePassword}/>
-                                <input type="submit" className="submit" value="LOG IN"
+                                <input type="submit"
+                                       className="submit"
+                                       value="LOG IN"
                                        style={this.state.styleLogInBtn}
                                        onMouseEnter={this.EnterLogInBtn}
                                        onMouseLeave={this.LeaveLogInBtn}/>
@@ -142,18 +134,16 @@ class LogIn extends Component
                                         style={this.state.styleGoBackBtn}>
                                         <i className="fas fa-chevron-left"/> GO BACK
                                 </button>
+                                {(submit === false) && <h3>Invalid login or password</h3> }
                             </form>
-                    </> :
-                    <>
-                        <LoadingData setLogStatus={this.props.setLogStatus}/>
-                    </>}
-                </div>
-                <div>
-                    {(submit === false) && <h3>Invalid login or password</h3> }
-                </div>
-            </>
-         )
-    }
+                        </> :
+                        <>
+                            <LoadingData setLogStatus={this.props.setLogStatus}/>
+                        </>}
+                    </div>
+                 </>
+            )
+        }
 }
 
 export default LogIn;

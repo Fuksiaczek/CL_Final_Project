@@ -7,18 +7,11 @@
 @import '/lights';
 
 
-
-
-
 .sky
 {
   height: 100vh;
   width: inherit;
   background: $color-main2;
-  //background-color: rgba(25,59,83,1);
-  //background: @include filter-gradient(#193b53, #1f5057, vertical);
-  //background: @include background-image(linear-gradient(top, rgba(25,59,83,1) 0%, rgba(31,80,87,1) 100%));
-
   background: rgba(29,69,98,1);
   background: -moz-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,69,98,1)), color-stop(100%, rgba(38,96,105,1)));
@@ -27,13 +20,10 @@
   background: -ms-linear-gradient(top, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
   background: linear-gradient(to bottom, rgba(29,69,98,1) 0%, rgba(38,96,105,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4562', endColorstr='#266069', GradientType=0 );
-
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-
 
   .graphic
   {
@@ -43,6 +33,7 @@
     align-items: flex-end;
     justify-content: center;
   }
+
   .text
   {
     height: 70%;
@@ -69,6 +60,7 @@
         text-shadow: 0 0 20px $color-main1 ;
       }
     }
+
     .h2 h2:nth-of-type(2)
     {
       word-spacing: 1.5rem;
@@ -76,17 +68,13 @@
       margin-top: 5px;
     }
   }
-
 }
-
-
-
 
 h1{
   font-size: 7.2rem;
 }
 
-.App{
+.app{
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -105,11 +93,10 @@ h1{
   border-top: 30px solid $color-main1;
   position: absolute;
   bottom: 340px;
-  //transform: rotate(180deg);
-
   z-index: 5;
   animation: star 20s infinite;
 }
+
 .star::before
 {
   content: '';
@@ -121,10 +108,8 @@ h1{
   border-top: 26px solid $color-main1;
   transform: translate(-46%, -98%) rotate(70deg);
   position: absolute;
-
-
-
 }
+
 .star::after
 {
   content: '';
@@ -136,9 +121,6 @@ h1{
   border-top: 26px solid $color-main1;
   transform: translate(-54%, -98%) rotate(-70deg);
   position: relative;
-
-
-
 }
 
 @keyframes star {
@@ -200,9 +182,7 @@ h1{
   font-weight: 400;
   text-shadow: 0 0 40px 20px $color-main1;
   line-height: 4.2rem;
-  //letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
-
 }
 
 .holiday-box

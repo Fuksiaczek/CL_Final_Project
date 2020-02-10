@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
 import '../../../sass/style.scss';
-
 
 class Snow extends Component {
 
@@ -36,7 +33,7 @@ class Snow extends Component {
             for (let i = 0; i < snowArray.length; i++) {
 
                 font = `${(Math.floor((Math.random() * (50 - 10)) + 50))}px`;
-                left = `${(Math.floor(Math.random() * (100 - 0)) + 0)}%`;
+                left = `${(Math.floor(Math.random() * (98 - 0)) + 0)}%`;
                 animationDuration = `${(Math.floor(Math.random() * (10 - 8)) + 8)}s`;
                 animationDelay = `${(Math.floor(Math.random() * (20 - 1)) + 1)}s`;
                 animationNum = `${(Math.floor(Math.random() * (20 - 5)) + 5)}`;

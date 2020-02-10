@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
 import '../../../sass/style.scss';
 
 class Tree extends Component
 {
-
-
     render() {
         const {treeGrow} = this.props;
         return(

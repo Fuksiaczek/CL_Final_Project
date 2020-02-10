@@ -1,17 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
-
+import {Link} from 'react-router-dom';
 import '../../../sass/style.scss';
-
-import users from "../../../data/users";
-import PageMain from "./page-main";
 
 class Header extends Component {
 
@@ -126,7 +115,7 @@ class Header extends Component {
                                     <Link to="/">HOME</Link>
                                 </li>
                                 <li>
-                                    <Link to="/game1">DRESS YOUR TREE</Link>
+                                    <Link to="/dress-your-tree">DRESS YOUR TREE</Link>
                                 </li>
                             </ul>
                         </nav>}

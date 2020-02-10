@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
 import '../../../sass/style.scss';
 
-import Snow from "../snow/snow";
+import Snow from "../snow/Snow";
 
 class MainText extends Component
 {
@@ -29,21 +27,6 @@ class MainText extends Component
     componentWillUnmount() {
         clearInterval(this.intervalId)
     }
-
-
-    EnterSnowBtn = () => {
-        this.setState({
-            styleSnowBtn: {
-                background: "#911719",
-                cursor: "pointer"}
-        });
-    };
-
-    LeaveSnowBtn = () => {
-        this.setState({
-            styleSnowBtn: {}
-        });
-    };
 
     HandleSnowBtn = () =>
     {
@@ -78,11 +61,8 @@ class MainText extends Component
                         </h2>
                         <h2>LEFT FOR CHRISTMAS</h2>
                         <button className="lor-btn"
-                        style={this.state.styleSnowBtn}
-                        onMouseEnter={this.EnterSnowBtn}
-                        onMouseLeave={this.LeaveSnowBtn}
-                        onClick={this.HandleSnowBtn}>
-                            {this.state.letItSnow ? "STOP THE SNOW" : "LET IT SNOW"}
+                                onClick={this.HandleSnowBtn}>
+                                {this.state.letItSnow ? "STOP THE SNOW" : "LET IT SNOW"}
                         </button>
                     </div>
                 </div>

@@ -1,19 +1,10 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
-import BackgroundImage from "./background-image";
-import MainText from "./main-text";
-import LoginOrRegister from "../log-in-or-register/login-or-register";
-
-import Snow from "../snow/snow";
-
-import Header from "./header";
-
+import BackgroundImage from "./BackgroundImage";
+import MainText from "./MainText";
+import LoginOrRegister from "../log-in-or-register/LoginOrRegister";
+import Header from "./Header";
 import "../../../sass/style.scss";
-
 import users from "../../../data/users";
-
-
 
 class PageMain extends Component{
 
@@ -72,7 +63,6 @@ class PageMain extends Component{
             </>
         )
     }
-
 
 
 }

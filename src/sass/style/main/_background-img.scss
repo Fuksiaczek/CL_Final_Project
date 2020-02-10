@@ -8,24 +8,27 @@
   height: 800px;
   border-radius: 50%;
   position: relative;
+
 }
 .snow-ground
 {
   width: 100%;
-  height: 300px;
+  height: 100px;
   position: relative;
   bottom: 1px;
   overflow: hidden;
+
+
   .snowdrift1
   {
     @include base-snowdrift;
-    top: 250px;
+    top: 50px;
     left: 700px;
   }
   .snowdrift2
   {
     @include base-snowdrift;
-    top: -550px;
+    top: -750px;
     left: 280px;
   }
   .snowdrift2::after
@@ -39,7 +42,7 @@
   .snowdrift3
   {
     @include base-snowdrift;
-    top: -1380px;
+    top: -1580px;
     left: -245px;
   }
   .snowdrift3::after

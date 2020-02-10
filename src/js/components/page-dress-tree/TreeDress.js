@@ -1,22 +1,11 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
-
 import '../../../sass/style.scss';
 
-import BackgroundImage from "../page-main/background-image";
-import Tree from "./tree";
-
-import Header from "../page-main/header";
-import Lights from "./lights";
-import Star from "./star";
-
+import BackgroundImage from "../page-main/BackgroundImage";
+import Tree from "./Tree";
+import Header from "../page-main/Header";
+import Lights from "./Lights";
+import Star from "./Star";
 
 class TreeDress extends Component
 {
@@ -27,20 +16,6 @@ class TreeDress extends Component
             lightsOn: false,
             isStar: false
         };
-
-    EnterGrowBtn = () => {
-        this.setState({
-            styleGrowBtn: {
-                background: "#911719",
-                cursor: "pointer"},
-        });
-    };
-
-    LeaveGrowBtn = () => {
-        this.setState({
-            styleGrowBtn: {}
-        });
-    };
 
     HandleGrowBtn = () =>
     {
@@ -96,22 +71,16 @@ class TreeDress extends Component
                             {treeGrow === 4 ?
                                 (!lightsOn && <button className="lor-btn grow-btn"
                                     onClick={this.HandleLightsBtn}
-                                    onMouseLeave={this.LeaveGrowBtn}
-                                    style={styleGrowBtn}
-                                    onMouseEnter={this.EnterGrowBtn}>TURN ON THE LIGHTS
+                                    style={styleGrowBtn}>TURN ON THE LIGHTS
                             </button>):
                                 <button className="lor-btn grow-btn"
                                     onClick={this.HandleGrowBtn}
-                                    onMouseLeave={this.LeaveGrowBtn}
-                                    style={styleGrowBtn}
-                                    onMouseEnter={this.EnterGrowBtn}>GROW
+                                    style={styleGrowBtn}>GROW
                             </button>}
                             {(lightsOn && !isStar) &&
                                 <button className="lor-btn grow-btn"
                                         onClick={this.HandleStarBtn}
-                                        onMouseLeave={this.LeaveGrowBtn}
-                                        style={styleGrowBtn}
-                                        onMouseEnter={this.EnterGrowBtn}>PUT THE STAR
+                                        style={styleGrowBtn}>PUT THE STAR
                                 </button>}
                             {isStar && <Star/>}
                             {lightsOn && <Lights/>}

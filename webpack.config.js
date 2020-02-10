@@ -5,14 +5,14 @@ const Html = require('html-webpack-plugin');
 module.exports = {
   entry: [
     "whatwg-fetch", // polyfill dla fetch
-    "./src/js/app.js", // główny plik aplikacji
+    "./src/js/App.js", // główny plik aplikacji
   ],
   output: { 
     filename: "js/out.js", // ścieżka pliku wyjscia
     path: path.resolve(__dirname, "build") //zapisuj wszystko w ./build
   },
   devServer: {
-    port: 3000,
+    port: 3002,
   },
   module: {
     rules: [
