@@ -20,3 +20,6 @@ This is a Christmas app that helps users to prepare for Christmas. Users can see
     - send a letter to St. Nicholas
     - make presents
     - make ginger cookies
+
+### Video
+[![Watch the video](https://img.youtube.com/vi/V-iYSli4LY8/maxresdefault.jpg)](https://www.youtube.com/watch?v=V-iYSli4LY8)
