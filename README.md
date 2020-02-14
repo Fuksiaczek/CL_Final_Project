@@ -21,5 +21,7 @@ This is a Christmas app that helps users to prepare for Christmas. Users can see
     - make presents
     - make ginger cookies
 
-### Demo
-[![Watch the video](https://img.youtube.com/vi/2aBb3YX-LFE/maxresdefault.jpg)](https://www.youtube.com/watch?v=2aBb3YX-LFE)
+### Demo:
+click the gif below to see more
+
+[![Watch the video](src/demo/demo.gif)](https://www.youtube.com/watch?v=2aBb3YX-LFE)
