@@ -98,8 +98,6 @@ class LogIn extends Component
         this.props.isGoBackLog();
     };
 
-
-
     render() {
         const {usersLogIn} = this.props;
         const {submit} = this.state;
