@@ -35,6 +35,7 @@ class Register extends Component
 
     HandleGoBackBtn = (e) => {
         e.preventDefault();
+        this.props.isGoBackRegister();
     };
 
     onChangeName = (e) =>
@@ -147,6 +148,20 @@ class Register extends Component
         }
     };
 
+    EnterRegisterOnBtn = () => {
+        this.setState({
+            styleRegisterOnBtn: {
+                background: "#911719",
+                cursor: "pointer"}
+        });
+    };
+
+    LeaveRegisterOnBtn = () => {
+        this.setState({
+            styleRegisterOnBtn: {}
+        });
+    };
+
 
 
 render() {
@@ -192,7 +207,12 @@ render() {
                                value={passwordConfirm}
                                placeholder="repeat your password"
                                onChange={this.onChangePasswordConfirm}/>
-                        <input type="submit" className="submit" value="REGISTER"/>
+                        <input type="submit"
+                               className="submit"
+                               value="REGISTER"
+                               onMouseEnter={this.EnterRegisterOnBtn}
+                               onMouseLeave={this.LeaveRegisterOnBtn}
+                               style={this.state.styleRegisterOnBtn}/>
                         <button className="back-btn"
                                 onMouseEnter={this.EnterGoBackBtn}
                                 onMouseLeave={this.LeaveGoBackBtn}

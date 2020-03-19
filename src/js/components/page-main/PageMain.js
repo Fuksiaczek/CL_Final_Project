@@ -4,15 +4,16 @@ import MainText from "./MainText";
 import LoginOrRegister from "../log-in-or-register/LoginOrRegister";
 import Header from "./Header";
 import "../../../sass/style.scss";
-import users from "../../../data/users";
+import users from "../../../data/users.json";
 
-class PageMain extends Component{
+class PageMain extends Component {
 
     state =
         {
             isLogIn: false,
             //login: ""
         };
+
 
     setLogStatus = () =>
     {
@@ -51,7 +52,7 @@ class PageMain extends Component{
 
                             {isLogIn ? <MainText/> :
                             <LoginOrRegister
-                                usersLogIn={users}
+                                usersLogIn={users.users}
                                 setLogStatus={this.setLogStatus}
                                 setLogin={this.props.setLogin}/>}
 
