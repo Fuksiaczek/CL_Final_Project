@@ -17,21 +17,9 @@ class Register extends Component
                     password: ""
                 },
             passwordConfirm: "",
+            passwordVal: null,
+            loginIsAvailable: null,
         };
-
-    EnterGoBackBtn = () => {
-        this.setState({
-            styleGoBackBtn: {
-                background: "#911719",
-                cursor: "pointer"}
-        });
-    };
-
-    LeaveGoBackBtn = () => {
-        this.setState({
-            styleGoBackBtn: {}
-        });
-    };
 
     HandleGoBackBtn = (e) => {
         e.preventDefault();
@@ -83,6 +71,8 @@ class Register extends Component
 
     onChangeLogin = (e) =>
     {
+        const {data} = this.props;
+
         this.setState({
             newUser:
                 {
@@ -93,6 +83,34 @@ class Register extends Component
                     password: this.state.newUser.password,
                 }
         });
+
+        if(e.target.value)
+        {
+            let counter = 0;
+
+            for (let i = 0; i < data.length; i++)
+            {
+                if(e.target.value.trim() === data[i].login.trim())
+                {
+                    counter += 1;
+                }
+            }
+
+            if(counter === 0)
+            {
+                this.setState(
+                    {
+                        loginIsAvailable: true,
+                    });
+            }
+            else
+            {
+                this.setState(
+                    {
+                        loginIsAvailable: false,
+                    });
+            }
+        }
     };
 
     onChangePassword = (e) =>
@@ -112,10 +130,31 @@ class Register extends Component
     onChangePasswordConfirm = (e) =>
     {
 
-        this.setState({
-            passwordConfirm: e.target.value
-        });
+        if(this.state.newUser.password.trim() === e.target.value.trim())
+        {
+            this.setState({
+                passwordVal: true
+            });
+        }
+        else
+        {
+            this.setState({
+                passwordVal: false
+            });
+        }
 
+        if(this.state.passwordVal)
+        {
+            this.setState({
+                passwordConfirm: e.target.value
+            });
+        }
+        else
+        {
+            this.setState({
+                passwordConfirm: ""
+            });
+        }
     };
 
     onSubmit = (e) =>
@@ -124,8 +163,11 @@ class Register extends Component
 
         const url = "http://localhost:3000";
         const {name, surname, email, login, password} = this.state.newUser;
+        const {passwordConfirm, loginIsAvailable} = this.state;
+        const {data} = this.props;
+        console.log(data);
 
-        if(name && surname && email && login && password && this.state.passwordConfirm)
+        if(name && surname && email && login && password && passwordConfirm && loginIsAvailable)
         {
             $.ajax({
                 method: "POST",
@@ -143,24 +185,11 @@ class Register extends Component
                         login: "",
                         password: "",
                     },
-                passwordConfirm: ""
+                passwordConfirm: "",
             });
         }
     };
 
-    EnterRegisterOnBtn = () => {
-        this.setState({
-            styleRegisterOnBtn: {
-                background: "#911719",
-                cursor: "pointer"}
-        });
-    };
-
-    LeaveRegisterOnBtn = () => {
-        this.setState({
-            styleRegisterOnBtn: {}
-        });
-    };
 
 
 
@@ -208,19 +237,17 @@ render() {
                                placeholder="repeat your password"
                                onChange={this.onChangePasswordConfirm}/>
                         <input type="submit"
-                               className="submit"
-                               value="REGISTER"
-                               onMouseEnter={this.EnterRegisterOnBtn}
-                               onMouseLeave={this.LeaveRegisterOnBtn}
-                               style={this.state.styleRegisterOnBtn}/>
-                        <button className="back-btn"
-                                onMouseEnter={this.EnterGoBackBtn}
-                                onMouseLeave={this.LeaveGoBackBtn}
-                                onClick={this.HandleGoBackBtn}
-                                style={this.state.styleGoBackBtn}>
+                               className="submit lor-btn-small"
+                               value="REGISTER"/>
+                        <button className="back-btn lor-btn-small"
+                                onClick={this.HandleGoBackBtn}>
                             <i className="fas fa-chevron-left"/> GO BACK
                         </button>
+                        <div className="lor-error-info">
+                        {(this.state.loginIsAvailable === false) && <h3>login is not available, try again</h3>}
+                        </div>
                     </form>
+
                 </div>
             </>
         )

@@ -12,7 +12,26 @@ class PageMain extends Component {
         {
             isLogIn: false,
             //login: ""
+            data: []
         };
+
+
+
+    checkoutRegister = () =>
+    {
+        const url = "http://localhost:3000";
+        $.ajax({
+            method: "GET",
+            url: url + "/users",
+        }).done(response => {
+            this.setState({
+                data: response
+            });
+        }).fail(error => {
+            console.error(error);
+        });
+    };
+
 
 
     setLogStatus = () =>
@@ -37,7 +56,7 @@ class PageMain extends Component {
     // }
 
     render() {
-        const {isLogIn} = this.state;
+        const {isLogIn, data} = this.state;
         const {login} = this.props;
         return(
             <>
@@ -46,15 +65,18 @@ class PageMain extends Component {
                         setLogOut={this.setLogOut}
                         setClearLogin={this.props.setClearLogin}/>
 
+
                 <section className="background-image ">
                     <div className="container">
                         <div className="sky">
-
                             {isLogIn ? <MainText/> :
                             <LoginOrRegister
                                 usersLogIn={users.users}
                                 setLogStatus={this.setLogStatus}
-                                setLogin={this.props.setLogin}/>}
+                                setLogin={this.props.setLogin}
+                                data={data}
+                                checkoutRegister={this.checkoutRegister}/>
+                                }
 
                             <BackgroundImage/>
 

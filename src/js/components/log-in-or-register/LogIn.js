@@ -65,34 +65,6 @@ class LogIn extends Component
         }
     };
 
-    EnterLogInBtn = () => {
-        this.setState({
-            styleLogInBtn: {
-                background: "#911719",
-                cursor: "pointer"}
-        });
-    };
-
-    LeaveLogInBtn = () => {
-        this.setState({
-            styleLogInBtn: {}
-        });
-    };
-
-    EnterGoBackBtn = () => {
-        this.setState({
-            styleGoBackBtn: {
-                background: "#911719",
-                cursor: "pointer"}
-        });
-    };
-
-    LeaveGoBackBtn = () => {
-        this.setState({
-            styleGoBackBtn: {}
-        });
-    };
-
     HandleGoBackBtn = (e) => {
         e.preventDefault();
         this.props.isGoBackLog();
@@ -120,19 +92,15 @@ class LogIn extends Component
                                        placeholder="your password"
                                        onChange={this.HandleChangePassword}/>
                                 <input type="submit"
-                                       className="submit"
-                                       value="LOG IN"
-                                       style={this.state.styleLogInBtn}
-                                       onMouseEnter={this.EnterLogInBtn}
-                                       onMouseLeave={this.LeaveLogInBtn}/>
-                                <button className="back-btn"
-                                        onMouseEnter={this.EnterGoBackBtn}
-                                        onMouseLeave={this.LeaveGoBackBtn}
-                                        onClick={this.HandleGoBackBtn}
-                                        style={this.state.styleGoBackBtn}>
+                                       className="submit lor-btn-small"
+                                       value="LOG IN"/>
+                                <button className="back-btn lor-btn-small"
+                                        onClick={this.HandleGoBackBtn}>
                                         <i className="fas fa-chevron-left"/> GO BACK
                                 </button>
-                                {(submit === false) && <h3>Invalid login or password</h3> }
+                                <div className="lor-error-info">
+                                    {(submit === false) && <h3>Invalid login or password</h3>}
+                                </div>
                             </form>
                         </> :
                         <>

@@ -1,5 +1,23 @@
 @import '../general/variables';
 
+@mixin hover-btn
+{
+  background: $color-main3-contrast-darker;
+  cursor: pointer;
+}
+
+@mixin lor-small-btn
+{
+  align-self: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background: $color-main3-contrast;
+  color: $color-light;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.1rem;
+}
 
 .login-or-register
 {
@@ -29,12 +47,11 @@
   line-height: 1.5rem;
   z-index: 2;
 }
-.lor-btn:hover
-{
-  background: $color-main3-contrast-darker;
-  cursor: pointer;
-}
 
+.lor-btn:hover,
+{
+ @include hover-btn;
+}
 
 //form
 .login-or-register {
@@ -61,20 +78,22 @@
       justify-content: center;
       flex-direction: column;
 
-      label {
+      label
+      {
         padding: 10px 0 5px 0;
       }
 
-      input {
-        padding: 5px;
-      }
-
-      input:focus
+      input
       {
-        -webkit-box-shadow: 0 0 10px 0 $color-main1;
-        -moz-box-shadow: 0 0 10px 0 $color-main1;
-        box-shadow: 0 0 10px 0 $color-main1;
-        border: none;
+        padding: 5px;
+
+        &:focus
+        {
+          -webkit-box-shadow: 0 0 10px 0 $color-main1;
+          -moz-box-shadow: 0 0 10px 0 $color-main1;
+          box-shadow: 0 0 10px 0 $color-main1;
+          border: none;
+        }
       }
 
       h3
@@ -83,48 +102,31 @@
       }
 
       .submit {
-        align-self: center;
-        width: 100%;
-        padding: 10px;
+
+        @include lor-small-btn;
         margin: 30px 0 10px 0;
-        border-radius: 20px;
-        background: $color-main3-contrast;
-        color: $color-light;
-        font-weight: 700;
-        font-size: 1rem;
-        line-height: 1.1rem;
-        z-index: 3;
+
+        &:hover
+        {
+          @include hover-btn
+        }
       }
 
       .back-btn {
-        line-height: 10px;
-        align-self: center;
-        width: 100%;
-        padding: 10px;
+
+        @include lor-small-btn;
         margin: 0 0 10px 0;
-        border-radius: 20px;
-        background: $color-main3-contrast;
-        color: $color-light;
-        font-weight: 700;
-        font-size: 1rem;
-        word-spacing: 0.5rem;
-        z-index: 3;
+
+        &:hover
+        {
+          @include hover-btn
+        }
       }
     }
   }
 
-  //.login-or-register::before {
-  //  content: "";
-  //  display: block;
-  //  position: absolute;
-  //  height: 96%;
-  //  width: 96%;
-  //  padding: -20px;
-  //  border: 1px solid $color-main1;
-  //}
-
-
 }
+
 
 .progress-box
 {
@@ -133,7 +135,6 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 10%;
-
 
   .progress
   {
@@ -164,6 +165,12 @@
 
 }
 
+.lor-error-info
+{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
 
 @keyframes rollingSnowflake {
 

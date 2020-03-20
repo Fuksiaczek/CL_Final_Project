@@ -17,7 +17,8 @@ class LoginOrRegister extends Component
     {
       this.setState({
               toLog: true
-      })
+      });
+      this.props.checkoutRegister();
     };
 
     EnterLogInBtn = () => {
@@ -52,7 +53,8 @@ class LoginOrRegister extends Component
     {
         this.setState({
             toRegister: true
-        })
+        });
+        this.props.checkoutRegister();
     };
 
     isGoBackLog = () =>
@@ -79,9 +81,11 @@ class LoginOrRegister extends Component
                     {toLog && <LogIn usersLogIn={usersLogIn}
                                      setLogStatus={this.props.setLogStatus}
                                      setLogin={this.props.setLogin}
-                                     isGoBackLog={this.isGoBackLog}/>}
+                                     isGoBackLog={this.isGoBackLog}
+                                     data={this.props.data}/>}
                     {toRegister && <Register usersLogIn={usersLogIn}
-                                             isGoBackRegister={this.isGoBackRegister}/>}
+                                             isGoBackRegister={this.isGoBackRegister}
+                                             data={this.props.data}/>}
                     {!(toLog || toRegister) &&
                     <>
                         <button className="log-in-btn lor-btn"
